@@ -1,4 +1,33 @@
-// Collapse navbar if user either clicks link or clicks outside navbar
+// COLOR THEME TOGGLER
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("colorModeToggle");
+  if (!toggle) return;
+
+  const prefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const savedTheme = localStorage.getItem("theme");
+  let darkMode =
+    savedTheme === "dark" || (!savedTheme && prefersDark);
+
+  function setTheme(dark) {
+    document.body.classList.toggle("dark-mode", dark);
+    toggle.innerHTML = dark
+      ? '<i class="bi bi-sun"></i> Light Mode'
+      : '<i class="bi bi-moon"></i> Dark Mode';
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }
+
+  setTheme(darkMode);
+
+  toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    darkMode = !darkMode;
+    setTheme(darkMode);
+  });
+});
+
+// NAVBAR COLLAPSE
 document.addEventListener("click", function (event) {
   const navbarToggler = document.querySelector(
     ".navbar-toggler"
@@ -23,7 +52,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Change button look when collapsed and not
+// CHANGE COLLAPSE BUTTON LOOK
 document
   .querySelectorAll('#projects [data-bs-toggle="collapse"]')
   .forEach((btn) => {
@@ -52,7 +81,7 @@ document
     });
   });
 
-// Scroll down when collapsed text is opened
+// SCROLL TO UNCOLLAPSED TEXT
 document
   .querySelectorAll('#projects [data-bs-toggle="collapse"]')
   .forEach((btn) => {
@@ -80,7 +109,7 @@ document
     });
   });
 
-// Custom smooth scroll function
+// SMOOTH SCROLL
 function smoothScrollTo(target, duration) {
   const start = window.scrollY;
   const change = target - start;
@@ -100,31 +129,7 @@ function smoothScrollTo(target, duration) {
   requestAnimationFrame(animateScroll);
 }
 
-// Form validation
-// (function () {
-//   "use strict";
-
-//   var forms = document.querySelectorAll(
-//     ".needs-validation"
-//   );
-
-//   Array.prototype.slice
-//     .call(forms)
-//     .forEach(function (form) {
-//       form.addEventListener(
-//         "submit",
-//         function (event) {
-//           if (!form.checkValidity()) {
-//             event.preventDefault();
-//             event.stopPropagation();
-//           }
-//           form.classList.add("was-validated");
-//         },
-//         false
-//       );
-//     });
-// })();
-
+// FORM VALIDATION
 document.addEventListener("DOMContentLoaded", function () {
   const forms = document.querySelectorAll(
     ".needs-validation"
@@ -144,31 +149,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const form = document.forms.emailForm;
-//   if (!form) return;
-
-//   form.addEventListener("submit", (e) => {
-//     const errors = [];
-//     const get = (name) => form[name]?.value.trim();
-
-//     if (!get("firstName"))
-//       errors.push("First name is required.");
-//     if (!get("lastName"))
-//       errors.push("Last name is required.");
-//     const email = get("email");
-//     if (!email) {
-//       errors.push("Email is required.");
-//     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-//       errors.push("Email is not valid.");
-//     }
-//     if (!get("message"))
-//       errors.push("Message is required.");
-
-//     if (errors.length) {
-//       e.preventDefault();
-//       alert(errors.join("\n"));
-//       form.classList.add("was-validated");
-//     }
-//   });
-// });
+// SCROLL TO TOP
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById(
+    "scrollToTopBtn"
+  );
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});

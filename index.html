@@ -21,10 +21,17 @@
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#main-nav">
+    <a
+      href="#main-content"
+      class="visually-hidden-focusable"
+      >Skip to main content</a
+    >
+
     <header>
       <nav
         id="main-nav"
         class="navbar navbar-expand-lg my-navbar fixed-top py-4"
+        aria-label="Main navigation"
       >
         <div class="container">
           <a
@@ -66,7 +73,7 @@
               >
               <a
                 href="#"
-                class="nav-link ms-4"
+                class="nav-link ms-lg-4"
                 id="colorModeToggle"
                 role="button"
                 aria-label="Toggle light/dark-mode"
@@ -102,7 +109,7 @@
                     <img
                       src="./img/image.png"
                       title="Kristina Palmquist"
-                      alt="me"
+                      alt="Portrait image of author"
                       height="250"
                       class="polaroid-img"
                     />
@@ -143,7 +150,7 @@
       </section>
     </header>
 
-    <main>
+    <main role="main" id="main-content">
       <section id="about">
         <article class="container">
           <h2 class="display-2">About</h2>
@@ -495,6 +502,7 @@
                   placeholder="active"
                   value=""
                   required
+                  aria-required="true"
                 />
                 <label
                   for="firstName"
@@ -513,6 +521,7 @@
                   placeholder="active"
                   value=""
                   required
+                  aria-required="true"
                 />
                 <label
                   for="lastName"
@@ -531,6 +540,7 @@
                   id="email"
                   placeholder="active"
                   required
+                  aria-required="true"
                 />
                 <label for="email" class="form-label ms-2"
                   >Email</label
@@ -546,6 +556,7 @@
                   class="form-control"
                   placeholder="Message"
                   required
+                  aria-required="true"
                 ></textarea>
                 <label for="message" class="form-label ms-2"
                   >Message</label
@@ -612,7 +623,10 @@
       </section>
     </main>
 
-    <footer class="my-footer bg-secondary">
+    <footer
+      role="contentinfo"
+      class="my-footer bg-secondary"
+    >
       <div class="container py-4">
         <div class="row g-3 g-lg-5 align-items-center">
           <div
@@ -623,11 +637,16 @@
               href="mailto:kristina.palmquist@gmail.com"
               target="_blank"
               class="footer-link"
+              aria-label="Email the author"
               ><i class="bi bi-envelope"></i> Email</a
             >
             <span class="mx-2">|</span>
 
-            <a href="tel:+46739500790" class="footer-link">
+            <a
+              href="tel:+46739500790"
+              class="footer-link"
+              aria-label="Call the author"
+            >
               <i class="bi bi-telephone"></i> Call</a
             >
           </div>
@@ -639,12 +658,14 @@
             <a
               href="https://www.linkedin.com/in/kristinapalmquist/"
               class="footer-link"
+              aria-label="Link to Linkedin profile"
               ><i class="bi bi-linkedin"></i> LinkedIn</a
             >
             <span class="mx-2">|</span>
             <a
               href="https://github.com/KristinaPalmquist"
               class="footer-link"
+              aria-label="Link to Github profile"
               ><i class="bi bi-github"></i> GitHub</a
             >
           </div>
@@ -659,12 +680,27 @@
       </div>
     </footer>
 
+    <button
+      type="button"
+      id="scrollToTopBtn"
+      class="btn btn-secondary btn-lg"
+      style="
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: none;
+        z-index: 1050;
+      "
+      aria-label="Scroll to top"
+    >
+      Scroll to top <i class="bi bi-arrow-up"></i>
+    </button>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
     <script src="js/index.js"></script>
-    <script src="js/colorModeToggler.js"></script>
   </body>
 </html>
