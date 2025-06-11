@@ -37,7 +37,7 @@ document
       chevron.classList.add("bi-chevron-down");
       btn.childNodes.forEach((node) => {
         if (node.nodeType === Node.TEXT_NODE) {
-          node.textContent = " Read less";
+          node.textContent = " Less";
         }
       });
     });
@@ -46,7 +46,7 @@ document
       chevron.classList.add("bi-chevron-right");
       btn.childNodes.forEach((node) => {
         if (node.nodeType === Node.TEXT_NODE) {
-          node.textContent = " Read more";
+          node.textContent = " More";
         }
       });
     });
