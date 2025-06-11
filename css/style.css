@@ -218,7 +218,7 @@ label.form-label {
 
 .my-link {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--bs-primary);
   text-decoration: none;
