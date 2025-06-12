@@ -135,6 +135,7 @@ main {
 .main-header h2 {
   font-size: 3.2vw;
 }
+
 .small-header {
   font-weight: bold;
   text-transform: uppercase;
@@ -465,11 +466,14 @@ main {
 }
 
 /* WELCOME */
+#welcome {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
 #welcome .polaroid {
   margin: 5px 5px 5px;
   transform: rotate(3deg);
 }
-
 #welcome .polaroid:hover {
   -webkit-transform: scale(1.08);
   -moz-transform: scale(1.08);
@@ -525,7 +529,7 @@ label.form-label {
   flex-direction: column;
   gap: 1.2rem;
   padding-bottom: 1rem;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   margin-top: 2rem;
 }
 

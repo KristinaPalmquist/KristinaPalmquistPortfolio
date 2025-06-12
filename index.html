@@ -113,13 +113,22 @@
         <h1 class="display-1 pt-5 pb-3">
           Kristina Palmquist
         </h1>
-        <h2 class="display-2 text-muted pt-3 pb-5">
-          System Developer - Python | JavaScript | Java
+        <h2 class="display-2 text-muted pt-3 pb-3">
+          <span class="d-block d-md-none"
+            >System Developer</span
+          >
+          <br /><span class="d-block d-md-none"
+            >Python | JavaScript | Java</span
+          >
+          <span class="d-none d-md-block"
+            >System Developer - Python | JavaScript |
+            Java</span
+          >
         </h2>
       </div>
 
       <section id="welcome">
-        <div class="bg-tertiary py-4 mb-4">
+        <div class="bg-tertiary mb-4 py-3">
           <div class="container p-3">
             <div class="row align-items-center">
               <div
@@ -132,9 +141,10 @@
                     class="polaroid-link"
                   >
                     <img
-                      src="./img/image.png"
+                      src="./img/image.avif"
                       title="Kristina Palmquist"
                       alt="Portrait image of author"
+                      width="250"
                       height="250"
                       class="polaroid-img"
                     />
@@ -256,8 +266,8 @@
                 >
                   <img
                     srcset="
-                      ./img/retrorummet-500.png 500w,
-                      ./img/retrorummet-750.png 750w
+                      ./img/retrorummet-500.avif 500w,
+                      ./img/retrorummet-750.avif 750w
                     "
                     title="RetroRummet"
                     alt="Screenshot of RetroRummet project site"
@@ -379,7 +389,7 @@
                 >
                   <img
                     srcset="
-                      ./img/garnstickor-500.png 500w,
+                      ./img/garnstickor-500.avif 500w,
                       ./img/garnstickor.png
                     "
                     title="Garn & Stickor"
@@ -438,8 +448,8 @@
                 >
                   <img
                     srcset="
-                      ./img/kafehjartat-500.png 500w,
-                      ./img/kafehjartat-750.png 750w
+                      ./img/kafehjartat-500.avif 500w,
+                      ./img/kafehjartat-750.avif 750w
                     "
                     title="Kafé Hjärtat"
                     alt="Screenshot of Kafé Hjärtat project site"
@@ -625,13 +635,13 @@
             >
               <button
                 type="reset"
-                class="btn btn-secondary btn-lg mb-4 mb-sm-0 w-50"
+                class="btn btn-secondary btn-lg mb-4 mb-sm-0"
               >
                 Empty content
               </button>
               <button
                 type="submit"
-                class="btn btn-success btn-lg mb-4 mb-sm-0 w-50"
+                class="btn btn-success btn-lg mb-4 mb-sm-0"
               >
                 Send message
               </button>
@@ -657,54 +667,98 @@
                   site:
                 </h6>
                 <div class="inspiration-links">
-                  <a
-                    href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-                    class="my-link"
-                    >Bootstrap 5 Docs</a
-                  >
+                  <div class="pb-3">
+                    <p>Frontend toolkit documentation:</p>
+                    <a
+                      href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                      class="my-link"
+                      >Bootstrap 5 Docs</a
+                    >
+                  </div>
+                  <div class="pb-3">
+                    <p>Update navbar on scroll:</p>
+                    <a
+                      href="https://getbootstrap.com/docs/5.3/components/scrollspy/#how-it-works"
+                      class="my-link"
+                      >Bootstrap Scrollspy
+                    </a>
+                  </div>
+                  <div class="pb-3">
+                    <p>Resize images online:</p>
+                    <a
+                      href="https://imageresizer.com"
+                      class="my-link"
+                      >Image Resizer</a
+                    >
+                  </div>
+                  <div class="pb-3">
+                    <p>
+                      Audit performance, accessibility, best
+                      practices and SEO:
+                    </p>
+                    <a
+                      href="https://developer.chrome.com/docs/lighthouse/overview"
+                      class="my-link"
+                      >Lighthouse
+                    </a>
+                  </div>
 
-                  <a
-                    href="https://getbootstrap.com/docs/5.3/components/scrollspy/#how-it-works"
-                    class="my-link"
-                    >Bootstrap Scrollspy</a
-                  >
+                  <div class="pb-3">
+                    <p>
+                      Using HTML img property srcset for
+                      images on responsive website:
+                    </p>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"
+                      class="my-link"
+                      >Mdn web docs</a
+                    >
+                  </div>
 
-                  <a
-                    href="https://imageresizer.com"
-                    class="my-link"
-                    >Image Resizer</a
-                  >
+                  <div class="pb-3">
+                    <p>Handle form submissions:</p>
+                    <a
+                      href="https://docs.netlify.com/forms/setup/"
+                      class="my-link"
+                      >Netlify Forms</a
+                    >
+                  </div>
 
+                  <div class="pb-3">
+                    <p>Generate favicons:</p>
+                    <a
+                      href="https://realfavicongenerator.net/"
+                      class="my-link"
+                      >RealFaviconGenerator</a
+                    >
+                  </div>
 
-                  <a
-                    href="https://developer.chrome.com/docs/lighthouse/overview"
-                    class="my-link"
-                    >Lighthouse</a
-                  >
+                  <div class="pb-3">
+                    <p>Linter for Responsive Images:</p>
+                    <a
+                      href="https://ausi.github.io/respimagelint/"
+                      class="my-link"
+                      >RespImageLint</a
+                    >
+                  </div>
+                  <div class="pb-3">
+                    <p>Create AVIF Images:</p>
+                    <a
+                      href="https://squoosh.app/"
+                      class="my-link"
+                      >Squoosh</a
+                    >
+                  </div>
 
-                  <a
-                    href="https://docs.netlify.com/forms/setup/"
-                    class="my-link"
-                    >Netlify Forms</a
-                  >
-                  <a
-                    href="http://w3docs.com/snippets/css/how-to-create-polaroid-image-with-css.html"
-                    target="_blank"
-                    class="my-link"
-                    >Polaroid photo effect</a
-                  >
-
-                  <a
-                    href="https://realfavicongenerator.net/"
-                    class="my-link"
-                    >Real Favicon Generator</a
-                  >
-                  <a
-                    href="https://ausi.github.io/respimagelint/"
-                    class="my-link"
-                    >RespImageLint - Linter for Responsive
-                    Images</a
-                  >
+                  <div class="pb-3">
+                    <p>Create Polaroid image with CSS:</p>
+                    <a
+                      href="http://w3docs.com/snippets/css/how-to-create-polaroid-image-with-css.html"
+                      target="_blank"
+                      class="my-link"
+                      >W3docs</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
