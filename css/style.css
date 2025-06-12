@@ -92,6 +92,20 @@ main {
   display: block;
 }
 
+@media (max-width: 767.98px) {
+  #projects .accent-line {
+    width: 70%;
+    min-width: 40px;
+    max-width: 100vw;
+    height: 8px;
+    margin: 16px 0 0 0;
+    margin-right: 0;
+    border-radius: 4px;
+    background-color: var(--bs-primary);
+    align-self: center;
+  }
+}
+
 /* BACKGROUNDS */
 .bg-secondary {
   background-color: var(--bs-secondary) !important;
@@ -376,6 +390,7 @@ main {
   display: block;
   width: 250px;
 }
+.polaroid:has(:hover),
 .polaroid:hover {
   -webkit-transform: scale(1.08);
   -moz-transform: scale(1.08);
@@ -384,6 +399,16 @@ main {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+.polaroid-hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* NAVBAR */
