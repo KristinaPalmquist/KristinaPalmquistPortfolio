@@ -52,18 +52,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// HOVER EFFECT ON POLAROID
-document
-  .querySelectorAll(".polaroid")
-  .forEach(function (card) {
-    card.addEventListener("mouseenter", function () {
-      card.classList.add("polaroid-hover");
-    });
-    card.addEventListener("mouseleave", function () {
-      card.classList.remove("polaroid-hover");
-    });
-  });
-
 // CHANGE COLLAPSE BUTTON LOOK
 document
   .querySelectorAll('#projects [data-bs-toggle="collapse"]')

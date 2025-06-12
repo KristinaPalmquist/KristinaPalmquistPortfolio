@@ -390,7 +390,6 @@ main {
   display: block;
   width: 250px;
 }
-.polaroid:has(:hover),
 .polaroid:hover {
   -webkit-transform: scale(1.08);
   -moz-transform: scale(1.08);
@@ -399,16 +398,6 @@ main {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-}
-.polaroid-hover {
-  -webkit-transform: scale(1.08);
-  -moz-transform: scale(1.08);
-  transform: scale(1.08);
-  z-index: 10;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* NAVBAR */
@@ -481,24 +470,39 @@ main {
   transform: rotate(3deg);
 }
 
+#welcome .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
 /* PROJECTS */
 #project-1 .accent-line {
   background-color: var(--bs-warning);
 }
-#project-1 .polaroid:hover {
-  transform: rotate(-3deg);
-}
 #project-2 .accent-line {
   background-color: var(--bs-danger);
-}
-#project-2 .polaroid:hover {
-  transform: rotate(3deg);
 }
 #project-3 .accent-line {
   background-color: var(--bs-info);
 }
+
+#project-1 .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08) rotate(-3deg);
+}
+
+#project-2 .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08) rotate(3deg);
+}
+
 #project-3 .polaroid:hover {
-  transform: rotate(-3deg);
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08) rotate(-3deg);
 }
 
 /* CONTACT */
@@ -633,6 +637,44 @@ body.dark-mode .navbar-toggler-icon::before,
 body.dark-mode .navbar-toggler-icon::after,
 body.dark-mode .navbar-toggler-icon span {
   background: var(--bs-warning);
+}
+
+body.dark-mode #welcome .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+}
+
+body.dark-mode #project-1 .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08) rotate(-3deg);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+}
+body.dark-mode #project-2 .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08) rotate(3deg);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+}
+body.dark-mode #project-3 .polaroid:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  transform: scale(1.08) rotate(-3deg);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.85);
 }
 
 body.dark-mode .about-link,
