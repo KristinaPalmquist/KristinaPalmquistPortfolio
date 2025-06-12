@@ -45,174 +45,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target="#main-nav">
-    <a
-      href="#main-content"
-      class="visually-hidden-focusable"
-      >Skip to main content</a
+  <body>
+    <main
+      role="main"
+      id="main-content"
+      class="d-flex align-items-center"
     >
-
-    <header>
-      <nav
-        id="main-nav"
-        class="navbar navbar-expand-lg my-navbar fixed-top py-4"
-        aria-label="Main navigation"
-      >
-        <div class="container p-3">
-          <a
-            class="navbar-brand text-uppercase fw-bold"
-            href="#home"
-            >Portfolio</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse"
-            id="navbarNavAltMarkup"
-          >
-            <div class="navbar-nav ms-auto">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="#home"
-                >Home</a
-              >
-              <a class="nav-link" href="#about">About</a>
-              <a class="nav-link" href="#projects"
-                >Projects</a
-              >
-              <a class="nav-link" href="#contact"
-                >Contact</a
-              >
-              <a class="nav-link" href="#inspiration"
-                >Inspiration</a
-              >
-              <a
-                href="#"
-                class="nav-link ms-lg-4"
-                id="colorModeToggle"
-                role="button"
-                aria-label="Toggle light/dark-mode"
-                ><i class="bi bi-moon"> Dark mode</i></a
-              >
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main role="main" id="main-content">
-      <div class="bg-tertiary mb-4 py-3">
-        <div class="container">
-          <h1>Thank you for sending me a message!</h1>
+      <div class="bg-tertiary mb-4 py-3 h-100 w-100">
+        <div class="container d-flex-column text-center">
+          <h1 class="display-1">Thank you !</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dolorem, hic?
+            ...for sending me a message. I'll get back to
+            you as soon as I can.
           </p>
-          <button type="button" href="./index.html">
+          <i class="bi bi-hearts h1 text-danger"></i><br />
+          <button
+            class="btn btn-lg btn-primary my-3"
+            type="button"
+            onclick="location.href='index.html'"
+          >
             Back to my site
           </button>
         </div>
       </div>
     </main>
-
-    <footer
-      role="contentinfo"
-      class="my-footer bg-secondary"
-    >
-      <div class="container px-3 py-4">
-        <div class="row g-3 g-lg-5 align-items-center">
-          <div
-            class="col-12 col-lg-6 text-center text-lg-end"
-          >
-            <div class="d-block d-lg-inline">
-              <span class="footer-label d-block d-lg-inline"
-                >Contact:</span
-              >
-              <a
-                href="mailto:kristina.palmquist@gmail.com"
-                target="_blank"
-                class="footer-link"
-                aria-label="Email the author"
-                ><i class="bi bi-envelope"></i> Email</a
-              >
-              <span class="mx-2">|</span>
-              <a
-                href="tel:+46739500790"
-                class="footer-link"
-                aria-label="Call the author"
-              >
-                <i class="bi bi-telephone"></i> Call</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="col-12 col-lg-6 text-center text-lg-start"
-          >
-            <div class="d-block d-lg-inline">
-              <span class="footer-label d-block d-lg-inline"
-                >Links:</span
-              >
-
-              <a
-                href="https://www.linkedin.com/in/kristinapalmquist/"
-                class="footer-link"
-                aria-label="Link to Linkedin profile"
-                ><i class="bi bi-linkedin"></i> LinkedIn</a
-              >
-              <span class="mx-2">|</span>
-              <a
-                href="https://github.com/KristinaPalmquist"
-                class="footer-link"
-                aria-label="Link to Github profile"
-                ><i class="bi bi-github"></i> GitHub</a
-              >
-            </div>
-          </div>
-        </div>
-        <hr class="my-3" />
-        <p
-          class="text-center small mb-0"
-          style="letter-spacing: 0.1em"
-        >
-          &copy; Copyright Kristina Palmquist 2025
-        </p>
-      </div>
-    </footer>
-
-    <div id="scroll-to-top">
-      <button
-        type="button"
-        id="scroll-to-top-btn"
-        class="btn btn-secondary btn-lg"
-        style="
-          position: fixed;
-          bottom: 2rem;
-          right: 2rem;
-          display: none;
-          z-index: 10;
-        "
-        aria-label="Scroll to top"
-      >
-        Scroll to top <i class="bi bi-arrow-up"></i>
-      </button>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/index.js"></script>
   </body>
 </html>
