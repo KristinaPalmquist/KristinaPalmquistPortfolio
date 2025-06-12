@@ -149,27 +149,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// FORM SUBMISSION
-const handleSubmit = (event) => {
-  event.preventDefault();
+// // FORM SUBMISSION
+// const handleSubmit = (event) => {
+//   event.preventDefault();
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
+//   const myForm = event.target;
+//   const formData = new FormData(myForm);
+//   formData.append("form-name", myForm.getAttribute("name"));
 
-  fetch("/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
+//   fetch("/", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/x-www-form-urlencoded",
+//     },
+//     body: new URLSearchParams(formData).toString(),
+//   })
+//     .then(() => console.log("Form successfully submitted"))
+//     .catch((error) => alert(error));
+// };
 
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+// document
+//   .querySelector("form")
+//   .addEventListener("submit", handleSubmit);
 
 // SCROLL TO TOP
 document.addEventListener("DOMContentLoaded", function () {
