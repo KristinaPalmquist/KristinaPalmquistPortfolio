@@ -149,41 +149,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// // FORM SUBMISSION
-// const handleSubmit = (event) => {
-//   event.preventDefault();
-
-//   const myForm = event.target;
-//   const formData = new FormData(myForm);
-//   formData.append("form-name", myForm.getAttribute("name"));
-
-//   fetch("/", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/x-www-form-urlencoded",
-//     },
-//     body: new URLSearchParams(formData).toString(),
-//   })
-//     .then(() => console.log("Form successfully submitted"))
-//     .catch((error) => alert(error));
-// };
-
-// document
-//   .querySelector("form")
-//   .addEventListener("submit", handleSubmit);
-
 // SCROLL TO TOP
 document.addEventListener("DOMContentLoaded", function () {
   const scrollBtn = document.getElementById(
-    "scrollToTopBtn"
+    "scroll-to-top-btn"
   );
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 100) {
+  const offsetFromBottom = 200;
+
+  function updateButtonPosition() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    const distanceFromBottom =
+      docHeight - (scrollY + windowHeight);
+
+    if (scrollY > 100) {
       scrollBtn.style.display = "block";
     } else {
       scrollBtn.style.display = "none";
     }
-  });
+
+    if (distanceFromBottom < offsetFromBottom) {
+      scrollBtn.style.bottom = `${
+        offsetFromBottom - distanceFromBottom + 32
+      }px`;
+    } else {
+      scrollBtn.style.bottom = "2rem";
+    }
+  }
+
+  window.addEventListener("scroll", updateButtonPosition);
+  window.addEventListener("resize", updateButtonPosition);
+
   scrollBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
