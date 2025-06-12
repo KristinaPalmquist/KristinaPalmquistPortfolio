@@ -33,7 +33,7 @@
         class="navbar navbar-expand-lg my-navbar fixed-top py-4"
         aria-label="Main navigation"
       >
-        <div class="container">
+        <div class="container p-3">
           <a
             class="navbar-brand text-uppercase fw-bold"
             href="#home"
@@ -95,7 +95,7 @@
 
       <section id="welcome">
         <div class="bg-tertiary py-4 mb-4">
-          <div class="container">
+          <div class="container p-3">
             <div class="row align-items-center">
               <div
                 class="col-12 col-md-6 order-md-2 d-flex justify-content-center"
@@ -152,7 +152,7 @@
 
     <main role="main" id="main-content">
       <section id="about">
-        <article class="container">
+        <article class="container p-3">
           <h2 class="display-2">About</h2>
           <div
             class="d-flex align-items-stretch accent-wrap"
@@ -202,7 +202,7 @@
       </section>
 
       <section id="projects">
-        <div class="container">
+        <div class="container p-3">
           <h2 class="display-2">Projects</h2>
 
           <p>
@@ -214,7 +214,7 @@
           </p>
         </div>
 
-        <div class="container">
+        <div class="container p-3">
           <article
             id="project-1"
             class="row align-items-center py-5"
@@ -224,7 +224,8 @@
             >
               <div class="polaroid">
                 <a
-                  href="retrorummet.netlify.app"
+                  href="https://retrorummet.netlify.app"
+                  target="_blank"
                   title="RetroRummet"
                   class="polaroid-link"
                 >
@@ -250,8 +251,8 @@
                   <h3 class="display-5">RetroRummet</h3>
                   <p class="lead">
                     A friend told me about his idea to sell
-                    second hand furniture online and I
-                    decided to create a web site for fun.
+                    pre-loved furniture online and I decided
+                    to create a web site for fun.
                   </p>
                   <div class="mb-4">
                     <a
@@ -282,16 +283,16 @@
                 This project is based on a conversation I
                 had one evening with a friend who was toying
                 with the idea of starting a company selling
-                preloved furniture online. I decided to
-                create the project in Vue and make a
-                light/dark mode, a language toggle and a
+                second hand furniture online. I decided to
+                create the web shop project in Vue and make
+                a light/dark mode, a language toggle and a
                 glassmorphism effect.
               </p>
             </div>
           </article>
         </div>
 
-        <div class="container">
+        <div class="container p-3">
           <article
             id="project-2"
             class="row align-items-center py-5"
@@ -385,7 +386,7 @@
           </article>
         </div>
 
-        <div class="container">
+        <div class="container p-3">
           <article
             id="project-3"
             class="row align-items-center py-5"
@@ -395,7 +396,8 @@
             >
               <div class="polaroid">
                 <a
-                  href="#"
+                  href="https://kafehjartat.netlify.app"
+                  target="_blank"
                   title="Kafé Hjärtat"
                   class="polaroid-link"
                 >
@@ -452,7 +454,8 @@
                 The task was simply to create a website
                 using HTML and CSS. Very fun to test my
                 first knowledge in coding on creating a
-                site.
+                site. I wanted a cosy mood on the site and
+                chose to use warm, muted colors.
               </p>
             </div>
           </article>
@@ -460,11 +463,11 @@
       </section>
 
       <section id="contact">
-        <div class="container">
+        <div class="container p-3">
           <h2 class="display-2">Contact</h2>
         </div>
         <div class="bg-tertiary py-4 mb-4">
-          <div class="container">
+          <div class="container p-3">
             <div
               class="d-flex align-items-stretch accent-wrap"
             >
@@ -486,16 +489,20 @@
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="container p-3">
           <form
             id="contact-form"
-            action="mailto:kristina.palmquist@gmail.com"
-            method="post"
-            enctype="multipart/form-data"
-            data-netlify="true"
             name="contact"
+            method="POST"
+            netlify
             class="needs-validation"
+            enctype="multipart/form-data"
           >
+            <input
+              type="hidden"
+              name="form-name"
+              value="contact"
+            />
             <div class="row">
               <div class="form-floating mb-4 col-md-6">
                 <input
@@ -590,11 +597,11 @@
       </section>
 
       <section id="inspiration">
-        <div class="container">
+        <div class="container p-3">
           <h2 class="display-2">Inspiration</h2>
         </div>
         <div class="bg-tertiary py-4">
-          <div class="container">
+          <div class="container p-3">
             <div
               class="d-flex align-items-stretch py-5 accent-wrap"
             >
@@ -640,7 +647,7 @@
       role="contentinfo"
       class="my-footer bg-secondary"
     >
-      <div class="container py-4">
+      <div class="container px-3 py-4">
         <div class="row g-3 g-lg-5 align-items-center">
           <div
             class="col-12 col-lg-6 text-center text-lg-end"
