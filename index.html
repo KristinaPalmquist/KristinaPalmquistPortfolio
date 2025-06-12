@@ -169,7 +169,7 @@
                 <a
                   href="https://www.iths.se/utbildningar/javascript-utvecklare/"
                   target="_blank"
-                  class="my-link"
+                  class="about-link"
                   >JavaScript Developer</a
                 >
                 program at IT-Högskolan. During that time, I
@@ -180,7 +180,7 @@
                 <a
                   href="https://lexicongruppen.se/media/abclzogg/python-developer-fullstack-cloud-af-lexicon-stockholm.pdf"
                   target="_blank"
-                  class="my-link"
+                  class="about-link"
                   >System Developer Python and AI</a
                 >
                 program at Lexicon AB, which will be
@@ -581,17 +581,17 @@
               </div>
             </div>
             <div
-              class="my-3 d-flex justify-content-evenly g-5"
+              class="my-3 d-flex flex-column flex-sm-row justify-content-evenly align-items-center g-5"
             >
               <button
                 type="reset"
-                class="btn btn-secondary btn-lg"
+                class="btn btn-secondary btn-lg mb-4 mb-sm-0 w-50"
               >
                 Empty content
               </button>
               <button
                 type="submit"
-                class="btn btn-success btn-lg"
+                class="btn btn-success btn-lg mb-4 mb-sm-0 w-50"
               >
                 Send message
               </button>
@@ -600,11 +600,11 @@
         </div>
       </section>
 
-      <section id="inspiration">
+      <section id="inspiration" class="pb-0">
         <div class="container p-3">
           <h2 class="display-2">Inspiration</h2>
         </div>
-        <div class="bg-tertiary py-4">
+        <div class="bg-tertiary">
           <div class="container p-3">
             <div
               class="d-flex align-items-stretch py-5 accent-wrap"
@@ -648,6 +648,71 @@
     </main>
 
     <footer
+      role="contentinfo"
+      class="my-footer bg-secondary"
+    >
+      <div class="container px-3 py-4">
+        <div class="row g-3 g-lg-5 align-items-center">
+          <div
+            class="col-12 col-lg-6 text-center text-lg-end"
+          >
+            <div class="d-block d-lg-inline">
+              <span class="footer-label d-block d-lg-inline"
+                >Contact:</span
+              >
+              <a
+                href="mailto:kristina.palmquist@gmail.com"
+                target="_blank"
+                class="footer-link"
+                aria-label="Email the author"
+                ><i class="bi bi-envelope"></i> Email</a
+              >
+              <span class="mx-2">|</span>
+              <a
+                href="tel:+46739500790"
+                class="footer-link"
+                aria-label="Call the author"
+              >
+                <i class="bi bi-telephone"></i> Call</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-6 text-center text-lg-start"
+          >
+            <div class="d-block d-lg-inline">
+              <span class="footer-label d-block d-lg-inline"
+                >Links:</span
+              >
+
+              <a
+                href="https://www.linkedin.com/in/kristinapalmquist/"
+                class="footer-link"
+                aria-label="Link to Linkedin profile"
+                ><i class="bi bi-linkedin"></i> LinkedIn</a
+              >
+              <span class="mx-2">|</span>
+              <a
+                href="https://github.com/KristinaPalmquist"
+                class="footer-link"
+                aria-label="Link to Github profile"
+                ><i class="bi bi-github"></i> GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="my-3" />
+        <p
+          class="text-center small mb-0"
+          style="letter-spacing: 0.1em"
+        >
+          &copy; Copyright Kristina Palmquist 2025
+        </p>
+      </div>
+    </footer>
+
+    <!-- <footer
       role="contentinfo"
       class="my-footer bg-secondary"
     >
@@ -702,7 +767,7 @@
           &copy; Copyright Kristina Palmquist 2025
         </p>
       </div>
-    </footer>
+    </footer> -->
 
     <button
       type="button"
